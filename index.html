@@ -1,0 +1,128 @@
+<!doctype html>
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Admin angular theme</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+    <script src="vendor/jquery-2.1.1.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+<body data-ng-app="app">
+
+<div data-ng-controller="MainAppController">
+
+    <div class="page page-charts">
+
+        <section data-ng-controller="chartjsCtrl">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Line Chart js</h3>
+                        </div>
+                        <div class="panel-body">
+                            <chart class="chartjs" data-data="chartjsLine" data-type="Line" value="myChart"></chart>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Bar Chart js</h3>
+                        </div>
+                        <div class="panel-body">
+                            <chart class="chartjs" data-data="chartjsBar" data-type="Bar" value="myChart"></chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Radar Chart js</h3>
+                        </div>
+                        <div class="panel-body">
+                            <chart class="chartjs" data-data="chartjsRadar" data-type="Radar" value="myChart"></chart>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Polar Chart js</h3>
+                        </div>
+                        <div class="panel-body">
+                            <chart class="chartjs" data-data="chartjsPolarArea" data-type="PolarArea" value="myChart"></chart>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Pie Chart js</h3>
+                        </div>
+                        <div class="panel-body">
+                            <chart class="chartjs" data-data="chartjsPie" data-type="Pie" value="myChart"></chart>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Doughnut Chart js</h3>
+                        </div>
+                        <div class="panel-body">
+                            <chart class="chartjs" data-data="chartjsDoughnut" data-type="Doughnut" value="myChart"></chart>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+    </div>
+
+</div>
+
+<script src="vendor/Chart.min.js"></script>
+
+<script src="vendor/angular.min.js"></script>
+
+<script src="vendor/underscore-min.js"></script>
+
+<script src="src/angularchartjs.js"></script>
+
+<script>
+    angular.module('app', ['app.chart.ctrls']).controller('MainAppController', ['$scope', function ($scope) {
+
+            }]);
+</script>
+
+</body>
+</html>
