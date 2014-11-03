@@ -12,7 +12,7 @@ Dougnut charts
 
 Simply create a chart like the following : 
 
-<pre> <chart class="chartjs" data-data="chartjsLine" data-type="Line" value="myChart"></chart> </pre>
+<pre> chart class="chartjs" data-data="chartjsLine" data-type="Line" value="myChart" /chart </pre>
 
 Data is provided in the controller scope like this : 
 
